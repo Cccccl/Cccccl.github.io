@@ -99,25 +99,25 @@
 
 
 
-  <meta name="description" content="用正则表达式将url的查询参数解析成字典对象，url允许用户随意输入，只匹配正确的配对，非法的全部过滤掉。   substring(start,stop)方法用于提取字符串中介于两个指定下标之间的字符。   lastIndexOf(searchvalue,fromindex)方法可返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。默认从字符串的最后一个字符处开始搜索。">
-<meta name="keywords" content="url解析">
+  <meta name="description" content="浅拷贝    我们给变量赋值的时候，给内存地址赋予一个值，但是在赋值引用值类型的时候，只是共享一个内存区域，导致赋值的时候，跟之前的值保持一致性。 123456789101112131415161718192021// 数组var a = [1,2,3,4]var b = ab.push(&amp;apos;cccl&amp;apos;)console.log(a) // [ 1, 2, 3, 4, &amp;apos">
+<meta name="keywords" content="深拷贝">
 <meta property="og:type" content="article">
-<meta property="og:title" content="将url的查询参数解析成字典对象">
-<meta property="og:url" content="http://yoursite.com/2018/04/27/将url的查询参数解析成字典对象/index.html">
+<meta property="og:title" content="实现深拷贝">
+<meta property="og:url" content="http://yoursite.com/2018/04/29/实现深拷贝/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="用正则表达式将url的查询参数解析成字典对象，url允许用户随意输入，只匹配正确的配对，非法的全部过滤掉。   substring(start,stop)方法用于提取字符串中介于两个指定下标之间的字符。   lastIndexOf(searchvalue,fromindex)方法可返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。默认从字符串的最后一个字符处开始搜索。">
+<meta property="og:description" content="浅拷贝    我们给变量赋值的时候，给内存地址赋予一个值，但是在赋值引用值类型的时候，只是共享一个内存区域，导致赋值的时候，跟之前的值保持一致性。 123456789101112131415161718192021// 数组var a = [1,2,3,4]var b = ab.push(&amp;apos;cccl&amp;apos;)console.log(a) // [ 1, 2, 3, 4, &amp;apos">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-26T17:43:35.220Z">
+<meta property="og:updated_time" content="2018-04-29T15:28:56.620Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="将url的查询参数解析成字典对象">
-<meta name="twitter:description" content="用正则表达式将url的查询参数解析成字典对象，url允许用户随意输入，只匹配正确的配对，非法的全部过滤掉。   substring(start,stop)方法用于提取字符串中介于两个指定下标之间的字符。   lastIndexOf(searchvalue,fromindex)方法可返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。默认从字符串的最后一个字符处开始搜索。">
+<meta name="twitter:title" content="实现深拷贝">
+<meta name="twitter:description" content="浅拷贝    我们给变量赋值的时候，给内存地址赋予一个值，但是在赋值引用值类型的时候，只是共享一个内存区域，导致赋值的时候，跟之前的值保持一致性。 123456789101112131415161718192021// 数组var a = [1,2,3,4]var b = ab.push(&amp;apos;cccl&amp;apos;)console.log(a) // [ 1, 2, 3, 4, &amp;apos">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/27/将url的查询参数解析成字典对象/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/29/实现深拷贝/"/>
 
 
 
@@ -127,7 +127,7 @@
   };
 </script>
 
-  <title>将url的查询参数解析成字典对象 | Hexo</title>
+  <title>实现深拷贝 | Hexo</title>
   
 
 
@@ -330,7 +330,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/将url的查询参数解析成字典对象/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/29/实现深拷贝/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ccc_1l!">
@@ -347,7 +347,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">将url的查询参数解析成字典对象</h1>
+          <h1 class="post-title" itemprop="name headline">实现深拷贝</h1>
         
 
         <div class="post-meta">
@@ -359,7 +359,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-27T01:42:00+08:00">2018-04-27</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-29T23:30:00+08:00">2018-04-29</time>
             
 
             
@@ -415,19 +415,34 @@
 
       
         <ul>
-<li><p>用正则表达式将url的查询参数解析成字典对象，url允许用户随意输入，只匹配正确的配对，非法的全部过滤掉。</p>
+<li><p>浅拷贝  </p>
 <blockquote>
-<ul>
-<li>substring(start,stop)方法用于提取字符串中介于两个指定下标之间的字符。  </li>
-<li>lastIndexOf(searchvalue,fromindex)方法可返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。默认从字符串的最后一个字符处开始搜索。</li>
-<li>str.replace(regexp|substr, newSubStr|function)<br>假如replace()方法的第一个参数是一个RegExp对象，则代表第n个括号匹配的字符串。（对应于上述的$1，$2等。）</li>
-<li>decodeURIComponent() 函数可对 encodeURIComponent() 函数编码的 URI 进行解码。</li>
-</ul>
+<p>我们给变量赋值的时候，给内存地址赋予一个值，但是在赋值引用值类型的时候，只是共享一个内存区域，导致赋值的时候，跟之前的值保持一致性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">// 数组</span><br><span class="line">var a = [1,2,3,4]</span><br><span class="line">var b = a</span><br><span class="line">b.push(&apos;cccl&apos;)</span><br><span class="line">console.log(a) // [ 1, 2, 3, 4, &apos;cccl&apos; ]</span><br><span class="line">console.log(b) // [ 1, 2, 3, 4, &apos;cccl&apos; ]</span><br><span class="line"></span><br><span class="line">// 对象</span><br><span class="line">var test = &#123;a:&apos;a&apos;,b:&apos;b&apos;&#125;</span><br><span class="line">var test2 = test</span><br><span class="line">test2.a = &apos;a2&apos;</span><br><span class="line">console.log(test)  // &#123; a: &apos;a2&apos;, b: &apos;b&apos; &#125;</span><br><span class="line">console.log(test2) // &#123; a: &apos;a2&apos;, b: &apos;b&apos; &#125;</span><br><span class="line"></span><br><span class="line">// 数组的深拷贝</span><br><span class="line">var a = [1,2,3,4]</span><br><span class="line">var b = [].concat(a)</span><br><span class="line">// var b = a.slice(0)</span><br><span class="line">b.push(&apos;cccl&apos;)</span><br><span class="line">console.log(a) // [ 1, 2, 3, 4 ]</span><br><span class="line">console.log(b) // [ 1, 2, 3, 4, &apos;cccl&apos; ]</span><br></pre></td></tr></table></figure>
 </blockquote>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;&#125;;</span><br><span class="line">function getQueryObject(url) &#123;</span><br><span class="line">    url = url === null ? window.location.href : url;</span><br><span class="line">    var search = url.substring(url.lastIndexOf(&apos;?&apos;) + 1);  </span><br><span class="line">    var reg = /([^?&amp;=]+)=([^?&amp;=]+)/g;</span><br><span class="line">    var newString = search.replace(reg, replacer);</span><br><span class="line">    console.log(obj);</span><br><span class="line">&#125;</span><br><span class="line">function replacer(match, $1, $2) &#123;</span><br><span class="line">    var name = decodeURIComponent($1);</span><br><span class="line">    var value = decodeURIComponent($2);</span><br><span class="line">    value = String(value);</span><br><span class="line">    obj[name] = value;</span><br><span class="line">&#125;</span><br><span class="line">getQueryObject(&apos;https://www.baidu.com/s?wd=%E9%BE%99%E7%8F%A0&amp;rsv_spt=1&amp;rsv_iqid=0xb44372cc0001dc68&amp;issp=1&amp;f=3&amp;rsv_bp=0&amp;rsv_idx=2&amp;ie=utf-8&amp;tn=baiduhome_pg&amp;rsv_enter=1&amp;rsv_sug3=7&amp;rsv_sug1=6&amp;rsv_sug7=100&amp;rsv_sug2=0&amp;prefixsug=longzhu&amp;rsp=3&amp;inputT=2928&amp;rsv_sug4=2928&apos;)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>用拆分字符串的方式</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;&#125;;</span><br><span class="line">function getQueryObject(url) &#123;</span><br><span class="line">    url = url === null ? window.location.href : url;</span><br><span class="line">    var search = url.substring(url.lastIndexOf(&apos;?&apos;) + 1).split(&apos;&amp;&apos;)  </span><br><span class="line">    search.forEach(function(item)&#123;</span><br><span class="line">        var name = decodeURIComponent(item.split(&apos;=&apos;)[0])</span><br><span class="line">        var value = decodeURIComponent(item.split(&apos;=&apos;)[1])</span><br><span class="line">        obj[name]=value</span><br><span class="line">    &#125;)</span><br><span class="line">    console.log(obj)</span><br><span class="line">&#125;</span><br><span class="line">getQueryObject(&apos;https://www.baidu.com/s?wd=%E9%BE%99%E7%8F%A0&amp;rsv_spt=1&amp;rsv_iqid=0xb44372cc0001dc68&amp;issp=1&amp;f=3&amp;rsv_bp=0&amp;rsv_idx=2&amp;ie=utf-8&amp;tn=baiduhome_pg&amp;rsv_enter=1&amp;rsv_sug3=7&amp;rsv_sug1=6&amp;rsv_sug7=100&amp;rsv_sug2=0&amp;prefixsug=longzhu&amp;rsp=3&amp;inputT=2928&amp;rsv_sug4=2928&apos;)</span><br></pre></td></tr></table></figure></li>
+<li><p>JSON实现深拷贝</p>
+<ul>
+<li>JSON.stringify() 方法用于将 JavaScript 值转换为 JSON 字符串。  </li>
+<li>JSON.parse() 方法用于将一个 JSON 字符串转换为对象。</li>
+<li>先通过JSON.stringify一下，然后再JSON.parse一下，就能实现深拷贝。但是数据类型只支持基本数值类型。在JSON.stringify的时候就会把function给过滤了<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">  a: &apos;a&apos;,</span><br><span class="line">  b: function () &#123; console.log(&apos;b&apos;) &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 在JSON.stringify的时候就会把function给过滤了。</span><br><span class="line">console.log(JSON.parse(JSON.stringify(obj)))// &#123; a: &apos;a&apos; &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>递归拷贝</p>
+<ul>
+<li>JS 有哪些数据类型？ string number bool undefined null object symbol</li>
+<li>在JavaScript里使用typeof 来判断数据类型，只能区分基本类型，即 string, number,   undefined, boolean,object五种。对于数组、对象来说，其关系错综复杂，使用     typeof 都会统一返回 “object” 字符串。（function,使用typeof 会返回 function）</li>
+<li>Object.prototype.toString方法，判断某个对象值属于哪种内置类型。<blockquote>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString" target="_blank" rel="noopener">使用toString()检测对象类型</a></p>
+</blockquote>
+</li>
+<li>原型和实例之间的关系就需要用到 instanceof 操作符<blockquote>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof" target="_blank" rel="noopener">instanceof 运算符用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性。</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">function type(obj) &#123; </span><br><span class="line">    var map = &#123; </span><br><span class="line">        &apos;[object Boolean]&apos;: &apos;boolean&apos;,</span><br><span class="line">        &apos;[object Number]&apos;: &apos;number&apos;,</span><br><span class="line">        &apos;[object String]&apos;: &apos;string&apos;, </span><br><span class="line">        &apos;[object Function]&apos;: &apos;function&apos;, </span><br><span class="line">        &apos;[object Array]&apos; : &apos;array&apos;, </span><br><span class="line">        &apos;[object Date]&apos; : &apos;date&apos;, </span><br><span class="line">        &apos;[object RegExp]&apos; : &apos;regExp&apos;, </span><br><span class="line">        &apos;[object Undefined]&apos;: &apos;undefined&apos;, </span><br><span class="line">        &apos;[object Null]&apos; : &apos;null&apos;, </span><br><span class="line">        &apos;[object Object]&apos; : &apos;object&apos; </span><br><span class="line">    &#125; </span><br><span class="line">    return map[Object.prototype.toString.call(obj)] </span><br><span class="line">&#125; </span><br><span class="line">function deepClone(data)&#123; </span><br><span class="line">    var t = type(data);</span><br><span class="line">    var o = [];</span><br><span class="line">    if( t === &apos;array&apos;) &#123;</span><br><span class="line">        o = [];</span><br><span class="line">    &#125; else if( t === &apos;object&apos;) &#123; </span><br><span class="line">        o = &#123;&#125;; </span><br><span class="line">    &#125;else &#123; </span><br><span class="line">        return data; </span><br><span class="line">    &#125; </span><br><span class="line">    if(t === &apos;array&apos;) &#123; </span><br><span class="line">        for(var i=0;i&lt;data.length;i++)&#123;</span><br><span class="line">            o.push(deepClone(data[i])); </span><br><span class="line">        &#125; </span><br><span class="line">        return o; </span><br><span class="line">    &#125;else if(t === &apos;object&apos;) &#123; </span><br><span class="line">        for(key in data) &#123; </span><br><span class="line">            o[key] = deepClone(data[key])</span><br><span class="line">        &#125; </span><br><span class="line">        return o; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line">var testData = &#123;a:&apos;a&apos;,b:&apos;b&apos;,c:&apos;c&apos;&#125; </span><br><span class="line">var resultData = deepClone(testData) </span><br><span class="line">resultData.name = &apos;cc1l&apos; </span><br><span class="line">console.log(testData) </span><br><span class="line">console.log(resultData)</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+</ul>
+</li>
 </ul>
 
       
@@ -449,7 +464,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/url解析/" rel="tag"># url解析</a>
+            <a href="/tags/深拷贝/" rel="tag"># 深拷贝</a>
           
         </div>
       
@@ -462,8 +477,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/26/事件委托(event delegation)/" rel="next" title="手写事件模型及事件代理/委托">
-                <i class="fa fa-chevron-left"></i> 手写事件模型及事件代理/委托
+              <a href="/2018/04/27/将url的查询参数解析成字典对象/" rel="next" title="将url的查询参数解析成字典对象">
+                <i class="fa fa-chevron-left"></i> 将url的查询参数解析成字典对象
               </a>
             
           </div>
@@ -471,10 +486,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/29/实现深拷贝/" rel="prev" title="实现深拷贝">
-                实现深拷贝 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
